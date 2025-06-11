@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Face Swapper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 30px;
+            text-align: center;
+        }
+        input {
+            margin: 10px;
+        }
+        .upload-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-box">
+        <h2>Upload Two Faces to Swap</h2>
+        <form action="/swap" method="post" enctype="multipart/form-data">
+            <p><input type="file" name="src" required></p>
+            <p><input type="file" name="dst" required></p>
+            <p><input type="submit" value="Swap Faces"></p>
+        </form>
+    </div>
+</body>
+</html>
